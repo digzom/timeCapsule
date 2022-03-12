@@ -1,0 +1,65 @@
+.studentContainer {
+  display: flex;
+  column-gap: 16px;
+  animation: fadeInText 4s;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.studentCard {
+  padding: 10px 15px;
+  height: fit-content;
+  border: solid 1px rgb(128, 128, 128);
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 17px;
+  box-shadow: 4px 4px 1px rgb(44, 44, 44);
+  transition-duration: 200ms;
+}
+
+@media (max-width: 500px) {
+  .studentContainer {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .studentContainer {
+    flex-wrap: wrap;
+    row-gap: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .studentContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.studentCard:hover {
+  box-shadow: 6px 5px 5px;
+}
+
+.buttonLink {
+  text-decoration: none;
+  color: inherit;
+}
