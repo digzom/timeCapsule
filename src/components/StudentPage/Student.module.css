@@ -78,13 +78,6 @@
   font-size: 20px;
 }
 
-.mobileMessage {
-  font-size: 17px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
 .clickContainer {
   text-align: right;
   position: relative;
@@ -97,18 +90,6 @@
   opacity: 0.6;
 }
 
-.mobileBackMessage {
-  font-size: 17px;
-  padding: 13px 0;
-}
-
-.mobileMessageContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(187, 187, 187);
-}
-
 @media (max-width: 1500px) {
   .cardContainer {
     max-width: 1200px;
@@ -119,7 +100,23 @@
   .cardContainer {
     flex-direction: column;
   }
+  .mobileMessageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 187, 187);
+  }
 
+  .mobileBackMessage {
+    font-size: 17px;
+    padding: 13px 0;
+  }
+  .mobileMessage {
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
   .cardMessage {
     font-size: 19px;
   }

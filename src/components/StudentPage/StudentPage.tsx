@@ -83,9 +83,11 @@ export const StudentPage = ({ student }: StudentPageProps) => {
           />
         </Link>
         <div className={mobileMessageContainer}>
-          <div className={mobileBackMessage} onClick={() => router.back()}>
-            Voltar
-          </div>
+          {width < 1300 && (
+            <div className={mobileBackMessage} onClick={() => router.back()}>
+              Voltar
+            </div>
+          )}
         </div>
       </div>
       <div className={back}>
