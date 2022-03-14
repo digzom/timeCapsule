@@ -4,10 +4,14 @@ import { collection, getDocs } from "firebase/firestore/lite"
 import { db } from "../firebase"
 import { StudentListProps } from "../types/StudentTypes"
 import { GetStaticProps } from "next"
+import Head from "next/head"
 
 export default function Home({ studentList }: StudentListProps) {
   return (
     <div>
+      <Head>
+        <title>Cápsula do Tempo</title>
+      </Head>
       <Dashboard studentList={studentList} />
     </div>
   )
@@ -22,6 +26,7 @@ export const getStaticProps: GetStaticProps = async () => {
       props: {
         studentList,
       },
+      revalidate: 1000 * 60 * 60 * 6,
     }
   } catch (e) {
     console.log(e)

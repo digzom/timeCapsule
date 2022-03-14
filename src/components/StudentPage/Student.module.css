@@ -1,0 +1,149 @@
+.cardContainer {
+  display: flex;
+  max-width: 1370px;
+  max-height: 700px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.realContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+
+.messageContainer {
+  padding: 50px;
+  background-color: rgb(66, 66, 66);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: justify;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 685px;
+  animation: fadeIn 1s;
+}
+
+.loaderImg {
+  position: absolute;
+  display: column;
+}
+
+.cardImg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s;
+}
+
+.cardImg:hover {
+  opacity: 0.8;
+}
+
+.studentName {
+  color: rgb(224, 224, 224);
+}
+
+.back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.backMessage {
+  cursor: pointer;
+  transition: 300ms;
+  opacity: 0.6;
+}
+
+.backMessage:hover {
+  opacity: 1;
+}
+
+.cardMessage {
+  color: #eee;
+  font-size: 20px;
+}
+
+.mobileMessage {
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.clickContainer {
+  text-align: right;
+  position: relative;
+  margin-top: 10px;
+}
+
+.seta {
+  position: absolute;
+  bottom: 7px;
+  opacity: 0.6;
+}
+
+.mobileBackMessage {
+  font-size: 17px;
+  padding: 13px 0;
+}
+
+.mobileMessageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(187, 187, 187);
+}
+
+@media (max-width: 1500px) {
+  .cardContainer {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .cardMessage {
+    font-size: 19px;
+  }
+
+  .studentName {
+    font-size: 15px;
+  }
+
+  .realContainer {
+    margin: 0 auto;
+  }
+
+  .seta {
+    position: static;
+    bottom: 7;
+    opacity: 0.6;
+  }
+
+  .clickContainer {
+    position: static;
+    opacity: 0;
+  }
+
+  .backMessage {
+    opacity: 0;
+  }
+}

@@ -9,11 +9,11 @@ export const StudentsDashboard = ({
   return (
     <div className={styles.studentContainer}>
       {studentList?.map((student: Student) => (
-        <div className={styles.studentCard} key={student.name}>
-          <Link href={`/${student.name}`}>
-            <a className={styles.buttonLink}>{student.name}</a>
-          </Link>
-        </div>
+        <Link href={`/${student.name}`} key={student.name}>
+          <a className={styles.buttonLink}>
+            <div className={styles.studentCard}>{student.name}</div>
+          </a>
+        </Link>
       ))}
     </div>
   )
